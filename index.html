@@ -1,0 +1,34 @@
+<script>
+    // 0 = Sten
+    // 1 = Sax
+    // 2 = Påse
+    function play(player) {
+        let computer = Math.floor(Math.random() * 3);
+        
+        if(player == computer) {
+            alert("Det blev lika!");
+        } else if (player == 0) {
+            if(computer == 1) {
+                alert("Du vann!")
+            } else {
+                alert("Du förlorade!");
+            }
+        } else if (player == 1) {
+            if(computer == 2) {
+                alert("Du vann!")
+            } else {
+                alert("Du förlorade!");
+            }
+        } else if (player == 2) {
+            if(computer == 0) {
+                alert("Du vann!")
+            } else {
+                alert("Du förlorade!");
+            }
+        }
+    }
+</script>
+
+<input type="button" value="Sten" onclick="play(0);"> <!-- Skapar sten knappen -->
+<input type="button" value="Sax" onclick="play(1);"> <!-- Skapar sax knappen -->
+<input type="button" value="Påse" onclick="play(2);"> <!-- Skapar påse knappen -->
